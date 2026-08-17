@@ -3,10 +3,11 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
+        stage('Check Python') {
             steps {
-                git branch: 'main',
-                    url: 'https://github.com/kratospatil06-pixel/SeleniumJenkinsProject.git'
+                bat 'where python'
+                bat 'python --version'
+                bat 'python -m pip --version'
             }
         }
 
